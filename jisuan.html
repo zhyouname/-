@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<form action="" name="myfrom">
+		第一个数：<input type="text" id="t1"><br>
+		第二个数：<input type="text" id="t2"><br>
+		<input type="button" name="ad" value="+" id="a" onclick="count('+')">
+		<input type="button" name="su" value="-" id="a" onclick="count('-')">
+		<input type="button" name="ch" value="*" id="a" onclick="count('*')">
+		<input type="button" name="cu" value="/" id="a" onclick="count('/')"><br>
+		计算结果<input type="text" id="sum">
+	</form>
+	<script>
+		function count(obj){
+		var a=parseInt(document.getElementById("t1").value);  
+       var b=parseInt(document.getElementById("t2").value);  
+       var re;
+			switch(obj){  
+           case '+':re=a+b;  
+            break;  
+           case "-":re=a-b;  
+            break;  
+            case "*":re=a*b;  
+            break;
+            case "/":
+            if(b!=0)
+            re=a/b;
+            else
+            re="除数不能为0";  
+            break;   
+            default: 
+            re="请输入数字" 
+                  
+       }  
+        document.getElementById("sum").value=re;
+    }
+	</script>
+
+</body>
+</html>
